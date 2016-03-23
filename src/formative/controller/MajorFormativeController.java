@@ -48,14 +48,14 @@ public class MajorFormativeController
 	/**
 	 * This method takes the input and matches it with a list through a loop to get their major.
 	 * @param userMajor
-	 * @return what major they are in
+	 * @return 
 	 */
 	public String major(String inputMajor)
 	{
-		//String userMajor = "";
+		String userMajor = "";
 		if(inputMajor == majors[0])
 		{
-			return "Mathematics";
+			userMajor = "Mathematics";
 		}
 		
 		else
@@ -66,29 +66,35 @@ public class MajorFormativeController
 		{
 			if(inputMajor == majors[1])
 			{
-				return "Computer Science";
+				userMajor = "Computer Science";
 			}
 			else if(inputMajor == majors[2])
 			{
 				
-				return " Information Technology";
+				userMajor = " Information Technology";
 			}
 			
 			else if(inputMajor == majors[3])
 			{
 				
-				return "";
+				userMajor = "English";
+			}
+			
+			else if(inputMajor == majors[4])
+			{
+				
+				userMajor = "Teacher";
 			}
 
 			else
 			{
 				
-				return inputMajor;
+				userMajor = "Thats not a major:(";
 			}
 			
 		}
 		}
-		return inputMajor;
+		return userMajor;
 		
 	}
 	
