@@ -52,20 +52,41 @@ public class MajorFormativeController
 	 */
 	public String major(String inputMajor)
 	{
-		String userMajor = "";
-		for(int index = 0; index < majors.length; index++)
+		//String userMajor = "";
+		if(inputMajor == majors[0])
 		{
-			if(inputMajor == majors[index])
+			return "Mathematics";
+		}
+		
+		else
+		{
+			
+		
+		for(int index = 1; index < majors.length; index++)
+		{
+			if(inputMajor == majors[1])
 			{
-				userMajor = "Mathmatics";
-				return userMajor;
+				return "Computer Science";
 			}
+			else if(inputMajor == majors[2])
+			{
+				
+				return " Information Technology";
+			}
+			
+			else if(inputMajor == majors[3])
+			{
+				
+				return "";
+			}
+
 			else
 			{
 				
 				return inputMajor;
 			}
 			
+		}
 		}
 		return inputMajor;
 		
