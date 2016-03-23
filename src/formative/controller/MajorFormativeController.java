@@ -27,9 +27,9 @@ public class MajorFormativeController
 	@SuppressWarnings("static-access")
 	public void start()
 	{
-		startWindow.showInputDialog(message);
-		input = (String) startWindow.getInputValue();
-		interpret();
+		
+		input = startWindow.showInputDialog(message);
+		interpret(); 
 		
 	}
 	
@@ -37,13 +37,11 @@ public class MajorFormativeController
 	{
 		
 		
-		String output = " Your major is" + major(input.substring(1)) +"\n"
-				+ "You are a " + year(input.substring(2));
+		String output = " Your major is" + major(input.substring(0,1)) +"\n"
+				+ "You are a " + year(input.substring(1,2));
 		
 		return output;
 		
-//		return "Your major is" + major(controller.input.substring(1)) +"\n"
-//				+ "You are a " + year(controller.input.substring(2));
 		
 	}
 	
@@ -59,15 +57,17 @@ public class MajorFormativeController
 		{
 			if(inputMajor == majors[index])
 			{
-				userMajor = "";
+				userMajor = "Mathmatics";
+				return userMajor;
+			}
+			else
+			{
+				
+				return inputMajor;
 			}
 			
-			
-			return inputMajor;
-			
-			
 		}
-		return userMajor;
+		return inputMajor;
 		
 	}
 	
@@ -78,9 +78,7 @@ public class MajorFormativeController
 	 */
 	public String year(String inputYear)
 	{
-	try
-	{
-			int intYear = Integer.parseInt(inputYear);
+				int intYear = Integer.parseInt(inputYear);
 		
 		
 		
@@ -115,13 +113,7 @@ public class MajorFormativeController
 		
 		
 		return userYear;
-	}
-		
-		catch(NumberFormatException ex)
-		{
-			 System.err.println("Ilegal input");
-		}
-		return inputYear;
+	
 	}
 
 	
