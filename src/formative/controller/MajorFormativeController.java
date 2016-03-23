@@ -114,14 +114,14 @@ public class MajorFormativeController
 		}
 		
 		
-		
+		return userYear;
 	}
 		
 		catch(NumberFormatException ex)
 		{
 			 System.err.println("Ilegal input");
 		}
-		return userYear;
+		return inputYear;
 	}
 
 	
